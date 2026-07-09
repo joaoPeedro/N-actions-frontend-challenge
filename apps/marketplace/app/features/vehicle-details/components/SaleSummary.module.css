@@ -1,0 +1,47 @@
+.container {
+  padding: var(--ds-space-card-padding);
+  border: 1px solid var(--ds-color-border-subtle);
+  border-radius: var(--ds-radius-lg);
+}
+
+.infoRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--ds-space-layout-gutter);
+  padding-bottom: var(--ds-space-card-gap);
+  border-bottom: 1px solid var(--ds-color-border-subtle);
+}
+
+.infoRow:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.saleLink {
+  composes: focusRing from "../../../shared/styles/focus.module.css";
+  color: var(--ds-color-action-primary);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.saleLink:hover {
+  color: var(--ds-color-action-primary-hover);
+  text-decoration: underline;
+}
+
+.badge {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: var(--ds-radius-full);
+}
+
+.live {
+  background-color: var(--ds-color-status-live);
+}
+
+.upcoming {
+  background-color: var(--ds-color-status-upcoming);
+}

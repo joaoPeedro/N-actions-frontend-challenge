@@ -1,0 +1,62 @@
+.surface {
+  display: flex;
+  flex-direction: column;
+}
+
+.default {
+  background-color: var(--ds-color-surface-default);
+  border: none;
+  box-shadow: none;
+}
+
+.card {
+  background-color: var(--ds-color-surface-card);
+  border: 1px solid var(--ds-color-border-default);
+  box-shadow: var(--ds-elevation-sm);
+}
+
+.subtle {
+  background-color: var(--ds-color-surface-subtle);
+  border: none;
+  box-shadow: none;
+}
+
+.paddingNone {
+  padding: 0;
+}
+
+.paddingSmall {
+  padding: var(--ds-space-card-gap);
+}
+
+.paddingMedium {
+  padding: var(--ds-space-card-padding);
+}
+
+.paddingLarge {
+  padding: var(--ds-space-layout-gap);
+}
+
+.radiusNone {
+  border-radius: 0;
+}
+
+.radiusSmall {
+  border-radius: var(--ds-radius-sm);
+}
+
+.radiusMedium {
+  border-radius: var(--ds-radius-md);
+}
+
+.radiusLarge {
+  border-radius: var(--ds-radius-lg);
+}
+
+.fullWidth {
+  width: 100%;
+}
+
+.maxWidthMedium {
+  max-width: 600px;
+}

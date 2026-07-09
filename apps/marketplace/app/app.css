@@ -1,0 +1,14 @@
+@import "@ds/design-system/variables.css";
+
+/* Base stylesheet */
+body {
+  margin: 0;
+  font-family: var(--ds-font-family-body);
+  background-color: var(--ds-color-surface-default);
+  color: var(--ds-color-text-primary);
+}
+
+a:focus-visible {
+  outline: 2px solid var(--ds-color-action-primary);
+  outline-offset: 2px;
+}

@@ -1,0 +1,5 @@
+.active {
+  color: var(--ds-color-action-danger);
+  background: var(--ds-color-surface-card);
+  border-color: var(--ds-color-action-danger);
+}

@@ -1,0 +1,6 @@
+body {
+  margin: 0;
+  font-family: var(--ds-font-family-body);
+  background-color: var(--ds-color-surface-default);
+  color: var(--ds-color-text-primary);
+}

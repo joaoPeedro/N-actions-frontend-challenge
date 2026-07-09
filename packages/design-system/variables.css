@@ -1,0 +1,62 @@
+/* Generated from design tokens. Do not edit manually. */
+/* Brand: brand-a (mode: light) */
+:root {
+  /* Brand Theme Colors (Semantic mapped) */
+  --ds-color-primary: #111827;
+  --ds-color-primary-hover: #1f2937;
+  --ds-color-danger: #dc2626;
+  --ds-color-danger-hover: #b91c1c;
+
+  --ds-color-neutral-dark: #111827;
+  --ds-color-neutral-medium: #4b5563;
+  --ds-color-neutral-light: #e5e7eb;
+  --ds-color-neutral-extra-light: #f9fafb;
+
+  /* Semantic Mappings */
+  --ds-color-text-primary: #111827;
+  --ds-color-text-secondary: #4b5563;
+  --ds-color-text-subtle: #9ca3af;
+  --ds-color-text-on-primary: #f9fafb;
+
+  --ds-color-surface-default: #ffffff;
+  --ds-color-surface-subtle: #f3f4f6;
+  --ds-color-surface-card: #ffffff;
+
+  --ds-color-border-default: #e5e7eb;
+  --ds-color-border-subtle: #f3f4f6;
+
+  --ds-color-action-primary: #111827;
+  --ds-color-action-primary-hover: #1f2937;
+  --ds-color-action-danger: #dc2626;
+  --ds-color-action-danger-hover: #b91c1c;
+
+  --ds-color-status-live: #15803d;
+  --ds-color-status-live-subtle: #cbd2cd;
+  --ds-color-status-upcoming: #1d4ed8;
+  --ds-color-status-upcoming-subtle: #eff6ff;
+
+  /* Spacing */
+  --ds-space-layout-gutter: 1rem;
+  --ds-space-layout-gap: 2rem;
+  --ds-space-page-padding: 2rem;
+  --ds-space-card-padding: 1.5rem;
+  --ds-space-card-gap: 0.75rem;
+
+  /* Typography */
+  --ds-font-family-body: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --ds-font-family-heading: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --ds-font-size-base: 1rem;
+  --ds-font-size-heading: 1.5rem;
+
+  /* Radius */
+  --ds-radius-sm: 4px;
+  --ds-radius-md: 8px;
+  --ds-radius-lg: 12px;
+  --ds-radius-xl: 16px;
+  --ds-radius-full: 9999px;
+
+  /* Elevation */
+  --ds-elevation-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --ds-elevation-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --ds-elevation-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}

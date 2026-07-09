@@ -1,0 +1,17 @@
+.thumbnailButton {
+  width: 80px;
+  height: 50px;
+  min-height: 50px;
+  border-radius: var(--ds-radius-sm);
+  overflow: hidden;
+  background-color: var(--ds-color-surface-subtle);
+  transition: border-color 0.2s ease;
+}
+
+.thumbnailButton:hover {
+  border-color: var(--ds-color-border-default);
+}
+
+.activeThumbnail {
+  border-color: var(--ds-color-action-primary);
+}

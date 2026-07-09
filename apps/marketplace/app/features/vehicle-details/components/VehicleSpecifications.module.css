@@ -1,0 +1,32 @@
+.specsSurface {
+  border-color: var(--ds-color-border-subtle);
+}
+
+.specsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--ds-space-layout-gutter) var(--ds-space-layout-gap);
+}
+
+@media (max-width: 600px) {
+  .specsGrid {
+    grid-template-columns: 1fr;
+    gap: var(--ds-space-layout-gutter);
+  }
+}
+
+.specItem {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.specLabel {
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 0.75rem;
+}
+
+.specValue {
+  font-size: 1rem;
+}

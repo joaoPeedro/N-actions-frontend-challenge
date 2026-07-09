@@ -1,0 +1,46 @@
+{
+  // TypeScript Configuration for the Marketplace Application
+  //
+  // This file defines compiler configurations that enforce type safety,
+  // ensure compatibility with the React Router framework runtime, and optimize editor ergonomics.
+  // We use comments to explain the role of each property to maintain transparent configuration management.
+
+  "include": ["**/*", "**/.server/**/*", "**/.client/**/*", ".react-router/types/**/*"],
+  "compilerOptions": {
+    // Target Environment & Libraries
+    "lib": ["DOM", "DOM.Iterable", "ES2022"],
+    "target": "ES2022",
+    "module": "ES2022",
+    "moduleResolution": "bundler",
+    "jsx": "react-jsx",
+    "types": ["node", "vite/client", "vitest/globals"],
+
+    // Compilation Performance
+    "incremental": true, // Enable incremental compilation to speed up tsc checks
+
+    // Strict Type Safety Configurations
+    "strict": true, // Enable all strict type-checking options globally
+    "noImplicitReturns": true, // Ensure all code paths in functions return a value
+    "noFallthroughCasesInSwitch": true, // Prevent switch fallthrough bugs
+    "noUncheckedIndexedAccess": true, // Force undefined checks when indexing objects or arrays
+    "noUnusedLocals": true, // Disallow unused local variables
+    "noUnusedParameters": true, // Disallow unused function parameter parameters
+
+    // Module Resolution Paths & Aliasing
+    // React Router automatically registers paths mapped in this file inside Vite.
+    "rootDirs": [".", "./.react-router/types"],
+    "paths": {
+      "~/*": ["./app/*"], // Framework default alias
+      "@/*": ["./app/*"], // Simplified secondary alias option
+      "@shared/*": ["./app/shared/*"],
+      "@features/*": ["./app/features/*"]
+    },
+
+    // Interoperability & Code Emission Controls
+    "esModuleInterop": true, // Support importing CommonJS modules in ESM files
+    "verbatimModuleSyntax": true, // Enforce clean type imports (import type)
+    "noEmit": true, // Defer JS code emission entirely to Vite
+    "resolveJsonModule": true, // Allow direct importing of JSON files as modules
+    "skipLibCheck": true // Skip type checking of external library declaration files (.d.ts)
+  }
+}

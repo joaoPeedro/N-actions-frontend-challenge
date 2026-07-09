@@ -1,0 +1,109 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+
+.label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--ds-color-text-secondary);
+}
+
+.trigger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--ds-space-card-gap);
+  width: 100%;
+  padding: var(--ds-space-card-gap) var(--ds-space-card-padding);
+  border-radius: var(--ds-radius-md);
+  border: 1px solid var(--ds-color-border-default);
+  background-color: var(--ds-color-surface-card);
+  color: var(--ds-color-text-primary);
+  font-family: var(--ds-font-family-body);
+  font-size: var(--ds-font-size-base);
+  line-height: 1.25;
+  cursor: pointer;
+  outline: none;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.trigger:focus-visible,
+.triggerOpen {
+  border-color: var(--ds-color-action-primary);
+  box-shadow: 0 0 0 1px var(--ds-color-action-primary);
+}
+
+.triggerDisabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.value {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.icon {
+  display: flex;
+  flex-shrink: 0;
+  color: var(--ds-color-text-secondary);
+}
+
+.iconOpen {
+  transform: rotate(180deg);
+}
+
+.content {
+  overflow: hidden;
+  background-color: var(--ds-color-surface-card);
+  border: 1px solid var(--ds-color-border-default);
+  border-radius: var(--ds-radius-md);
+  box-shadow: var(--ds-elevation-md);
+  z-index: 50;
+}
+
+.viewport {
+  padding: 4px;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: var(--ds-space-card-gap);
+  padding: var(--ds-space-card-gap) var(--ds-space-card-padding);
+  border-radius: var(--ds-radius-sm);
+  font-family: var(--ds-font-family-body);
+  font-size: var(--ds-font-size-base);
+  color: var(--ds-color-text-primary);
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+}
+
+.item[data-highlighted] {
+  background-color: var(--ds-color-surface-subtle);
+}
+
+.item[data-disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.itemIndicator {
+  display: inline-flex;
+  width: 1em;
+  flex-shrink: 0;
+  color: var(--ds-color-action-primary);
+}
+
+.itemText {
+  flex: 1;
+}

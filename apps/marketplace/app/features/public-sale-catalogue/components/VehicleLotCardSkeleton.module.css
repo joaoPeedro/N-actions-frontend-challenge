@@ -1,0 +1,80 @@
+.card {
+  overflow: hidden;
+  border-radius: var(--ds-radius-lg);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.imageContainer {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+  background-color: var( --ds-color-text-subtle);
+}
+
+.favouritePlaceholder {
+  position: absolute;
+  top: var(--ds-space-card-gap);
+  right: var(--ds-space-card-gap);
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: var(--ds-radius-full);
+}
+
+.content {
+  padding: var(--ds-space-card-padding);
+  flex-grow: 1;
+}
+
+.titleBar {
+  height: 1.25rem;
+  width: 70%;
+  border-radius: var(--ds-radius-sm);
+}
+
+.subtitleBar {
+  height: 0.875rem;
+  width: 40%;
+  border-radius: var(--ds-radius-sm);
+}
+
+.priceContainer {
+  margin-top: auto;
+  border-top: 1px solid var(--ds-color-border-subtle);
+  padding-top: var(--ds-space-card-gap);
+}
+
+.priceBar {
+  height: 1.125rem;
+  width: 100%;
+  border-radius: var(--ds-radius-sm);
+}
+
+.shimmer {
+  background: linear-gradient(
+    90deg,
+    var(--ds-color-surface-subtle) 0%,
+    var(--ds-color-neutral-extra-light) 50%,
+    var(--ds-color-surface-subtle) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .shimmer {
+    animation: none;
+    background: var(--ds-color-surface-subtle);
+  }
+}

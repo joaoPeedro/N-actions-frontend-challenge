@@ -1,0 +1,25 @@
+.badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: var(--ds-radius-full);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.danger {
+  background-color: var(--ds-color-status-live-subtle);
+  color: var(--ds-color-status-live);
+}
+
+.primary {
+  background-color: var(--ds-color-status-upcoming-subtle);
+  color: var(--ds-color-status-upcoming);
+}
+
+.neutral {
+  background-color: var(--ds-color-surface-card);
+  color: var(--ds-color-text-secondary);
+  border: 1px solid var(--ds-color-border-default);
+}

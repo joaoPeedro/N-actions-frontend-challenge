@@ -1,0 +1,22 @@
+/* Shared focus utilities — aligned with design-system Button focus pattern */
+
+.focusRing:focus-visible {
+  outline: 2px solid var(--ds-color-action-primary);
+  outline-offset: 2px;
+}
+
+.focusRingOnDark:focus-visible {
+  outline: 2px solid var(--ds-color-text-on-primary);
+  outline-offset: 2px;
+}
+
+.cardFocusWithin:focus-within {
+  border-color: var(--ds-color-border-default);
+  box-shadow:
+    var(--ds-elevation-md),
+    0 0 0 2px var(--ds-color-action-primary);
+}
+
+.cardLink:focus-visible {
+  outline: none;
+}
