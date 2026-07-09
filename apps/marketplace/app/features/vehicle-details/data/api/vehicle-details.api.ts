@@ -4,7 +4,7 @@ import { fetchVehicleDetailByIdOnly as sharedFetchVehicleDetailByIdOnly } from "
 export async function fetchVehicleDetailById(saleId: string, lotId: string): Promise<VehicleDetailContract | null> {
   try {
     const lot = await sharedFetchVehicleDetailByIdOnly(lotId);
-    if (lot && lot.saleId === saleId) {
+    if (lot?.saleId === saleId) {
       return lot;
     }
     return null;

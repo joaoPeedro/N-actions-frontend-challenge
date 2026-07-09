@@ -16,9 +16,12 @@ export async function getVehicleDetails(
   saleId: string,
   lotId: string,
 ): Promise<VehicleDetailsResult> {
-  // 1. Fetch the sale details
-  const sale = await fetchSaleContractById(saleId);
-  
+  // 1. Fetch sale and lot in parallel
+  const [sale, lot] = await Promise.all([
+    fetchSaleContractById(saleId),
+    fetchVehicleDetailById(saleId, lotId),
+  ]);
+
   // 2. If the sale does not exist, return not-found
   if (!sale) {
     return { type: "not-found" };
@@ -29,15 +32,12 @@ export async function getVehicleDetails(
     return { type: "unavailable" };
   }
 
-  // 4. Fetch the lot details for the specific sale
-  const lot = await fetchVehicleDetailById(saleId, lotId);
-
-  // 5. If the lot doesn't exist in this public sale, return not-found
+  // 4. If the lot doesn't exist in this public sale, return not-found
   if (!lot) {
     return { type: "not-found" };
   }
 
-  // 6. Otherwise, the vehicle is public and available
+  // 5. Otherwise, the vehicle is public and available
   return {
     type: "available",
     sale,

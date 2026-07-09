@@ -28,7 +28,7 @@ export async function getPublicSales(filters?: PublicSalesFilters): Promise<Sale
 export async function getPublicSaleById(id: string): Promise<SaleContract | null> {
   const contract = await fetchSaleContractById(id);
   // Business Rule: If contract exists but is not public, return null
-  if (!contract || contract.saleType !== "public") {
+  if (contract?.saleType !== "public") {
     return null;
   }
   return mapPublicSaleContract(contract);
